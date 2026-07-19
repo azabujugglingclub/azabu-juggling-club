@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNE4PQCS25"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NNE4PQCS25');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azabu Juggling Club | 麻布ジャグリングクラブ</title>
-    <meta name="google-site-verification" content="6ipUC3fd0Ag1pcTLJSsn3EL6Dj0jN9g2tNsRxVuZqTA" />
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNE4PQCS25"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-NNE4PQCS25');
-        
-    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
@@ -76,6 +76,7 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8">
+                <a href="#promo-video" class="text-slate-600 hover:text-[#50C878] font-medium transition-colors">PV動画</a>
                 <a href="#about" class="text-slate-600 hover:text-[#50C878] font-medium transition-colors">About</a>
                 <a href="#calendar" class="text-slate-600 hover:text-[#50C878] font-medium transition-colors">Schedule</a>
                 <a href="#access" class="text-slate-600 hover:text-[#50C878] font-medium transition-colors">Access</a>
@@ -95,6 +96,7 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden bg-white border-b border-slate-100 p-6 flex-col gap-4 shadow-xl">
+            <a href="#promo-video" class="text-lg font-medium text-slate-700 mobile-link">PV動画</a>
             <a href="#about" class="text-lg font-medium text-slate-700 mobile-link">About</a>
             <a href="#calendar" class="text-lg font-medium text-slate-700 mobile-link">Schedule</a>
             <a href="#access" class="text-lg font-medium text-slate-700 mobile-link">Access</a>
@@ -126,18 +128,49 @@
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScYd9EPD3OND9Q5hqLTZbHBWprcT4mktw0J7PNKJVR4qma0LA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-10 text-center">
                         今すぐ無料体験に申し込む
                     </a>
-                    <a href="#about" class="px-8 py-4 rounded-full font-bold text-slate-600 hover:bg-slate-50 transition-all flex items-center gap-2 bg-white/80 shadow-sm">
-                        AJCについて知る 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    <a href="#promo-video" class="px-8 py-4 rounded-full font-bold text-slate-700 hover:bg-slate-100 transition-all flex items-center gap-2 bg-white/95 shadow-sm border border-slate-200/80">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-[#50C878]"><path d="M8 5v14l11-7z"/></svg>
+                        PV動画を見る (1分)
                     </a>
                 </div>
             </div>
         </div>
         
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-slate-400 animate-bounce">
-            <div class="w-6 h-10 border-2 border-slate-200 rounded-full flex justify-center p-1">
-                <div class="w-1 h-2 bg-slate-200 rounded-full"></div>
+        <a href="#promo-video" class="absolute bottom-10 left-1/2 -translate-x-1/2 text-slate-400 animate-bounce cursor-pointer z-20">
+            <div class="w-6 h-10 border-2 border-slate-300 rounded-full flex justify-center p-1">
+                <div class="w-1 h-2 bg-slate-400 rounded-full"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Promotion Video Section -->
+    <section id="promo-video" class="py-24 bg-white relative z-10 border-t border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="reveal active">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 text-[#50C878] font-bold text-sm mb-4 border border-emerald-500/20">
+                    PV公開中！
+                </span>
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+                    1分でわかる！麻布ジャグリングクラブ
+                </h2>
+                <p class="text-slate-600 max-w-2xl mx-auto mb-12 leading-relaxed text-base md:text-lg">
+                    麻布ジャグリングクラブの練習のプロモーションビデオです。<br class="hidden md:inline">日々の練習の成果を祭りで披露します。
+                </p>
+                
+                <!-- Video Container -->
+                <div class="flex justify-center">
+                    <div class="w-full max-w-[340px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-900 bg-slate-900 relative">
+                        <iframe 
+                            class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/DTRpWl9Yq8c?autoplay=0&mute=0&loop=1&playlist=DTRpWl9Yq8c" 
+                            title="Azabu Juggling Club Promo Video" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -586,7 +619,7 @@
                             referrerPolicy="no-referrer"
                         >
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                        <span class="absolute bottom-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">出演決定</span>
+                        <span class="absolute bottom-4 left-4 bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">出演終了</span>
                     </div>
                     <div class="p-8 flex-grow flex flex-col justify-between">
                         <div>
@@ -594,9 +627,8 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                                 <span>2026.07.04 (土) & 07.05 (日)</span>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-[#50C878] transition-colors">天の川蛍祭り</h3>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-[#50C878] transition-colors">天の川蛍祭り（終了）</h3>
                             <p class="text-sm text-slate-600 mb-6 leading-relaxed">
-                                ステージ時間：<span class="font-bold text-orange-500 bg-orange-50 px-2 py-0.5 rounded">調整中</span><br />
                                 白金高輪を湧かせる、躍動感あふれるジャグリングパフォーマンス。驚きと笑顔に満ちたステージをお楽しみください！
                             </p>
                         </div>
@@ -616,7 +648,7 @@
                             referrerPolicy="no-referrer"
                         >
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                        <span class="absolute bottom-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">出演決定</span>
+                        <span class="absolute bottom-4 left-4 bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">出演終了</span>
                     </div>
                     <div class="p-8 flex-grow flex flex-col justify-between">
                         <div>
@@ -624,9 +656,8 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                                 <span>2026.07.18 (土)</span>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-[#50C878] transition-colors">三田納涼カーニバル</h3>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-[#50C878] transition-colors">三田納涼カーニバル（終了）</h3>
                             <p class="text-sm text-slate-600 mb-6 leading-relaxed">
-                                ステージ時間：<span class="font-bold text-orange-500 bg-orange-50 px-2 py-0.5 rounded">調整中</span><br />
                                 活気にあふれた、歩行者天国の夏祭りでパフォーマンスをお届け！笑顔と驚きを詰め込んだステージです。
                             </p>
                         </div>
@@ -675,21 +706,21 @@
             <div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-6 reveal">
                 <div class="max-w-2xl">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 flex items-center gap-3">
-                        <svg class="text-[#1877F2]" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <svg class="text-[#FF0000]" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                         最新のパフォーマンスをチェック
                     </h2>
                     <p class="text-slate-500">
-                        Facebookでは日々の練習風景や、最新のリール動画を公開しています。
+                        YouTubeチャンネルでは日々の練習風景や、最新のパフォーマンス動画を公開しています。
                         日本チャンピオンの技を動画でご覧ください。
                     </p>
                 </div>
                 <a 
-                    href="https://www.facebook.com/profile.php?id=100077071728254" 
+                    href="https://youtube.com/channel/UCWwZ5fEfP0qIPb9CrE2uVpA" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 text-[#1877F2] font-bold hover:underline"
+                    class="flex items-center gap-2 text-[#FF0000] font-bold hover:underline"
                 >
-                    Facebookプロフィールを見る <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    YouTubeチャンネルを見る <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
             </div>
 
@@ -915,6 +946,19 @@
             {
                 id: "practice_event_1",
                 title: "【練習】赤羽小講堂　練習日",
+                start: "2026-06-27T09:00:00",
+                end: "2026-06-27T12:00:00",
+                allDay: false,
+                color: "#50C878",
+                extendedProps: {
+                    type: "practice",
+                    rawTitle: "赤羽小講堂　練習日",
+                    location: "港区立赤羽小学校 講堂"
+                }
+            },
+            {
+                id: "practice_event_2",
+                title: "【練習】赤羽小講堂　練習日",
                 start: "2026-07-04T09:00:00",
                 end: "2026-07-04T12:00:00",
                 allDay: false,
@@ -926,7 +970,7 @@
                 }
             },
             {
-                id: "practice_event_2",
+                id: "practice_event_3",
                 title: "【練習】赤羽小講堂　練習日",
                 start: "2026-07-11T09:00:00",
                 end: "2026-07-11T12:00:00",
@@ -939,7 +983,7 @@
                 }
             },
             {
-                id: "practice_event_3",
+                id: "practice_event_4",
                 title: "【練習】赤羽小体育館　練習日",
                 start: "2026-07-12T09:00:00",
                 end: "2026-07-12T12:00:00",
@@ -952,7 +996,7 @@
                 }
             },
             {
-                id: "practice_event_4",
+                id: "practice_event_5",
                 title: "【練習】赤羽小体育館　練習日",
                 start: "2026-07-18T09:00:00",
                 end: "2026-07-18T12:00:00",
@@ -965,7 +1009,7 @@
                 }
             },
             {
-                id: "practice_event_5",
+                id: "practice_event_6",
                 title: "【練習】赤羽小講堂　練習日",
                 start: "2026-07-25T09:00:00",
                 end: "2026-07-25T12:00:00",
@@ -977,40 +1021,92 @@
                     location: "港区立赤羽小学校 講堂"
                 }
             },
+            {
+                id: "practice_event_7",
+                title: "【練習】赤羽小体育館　練習日",
+                start: "2026-08-01T09:00:00",
+                end: "2026-08-01T12:00:00",
+                allDay: false,
+                color: "#50C878",
+                extendedProps: {
+                    type: "practice",
+                    rawTitle: "赤羽小体育館　練習日",
+                    location: "港区立赤羽小学校 体育館"
+                }
+            },
+            {
+                id: "practice_event_8",
+                title: "【練習】赤羽小講堂　練習日",
+                start: "2026-08-08T09:00:00",
+                end: "2026-08-08T12:00:00",
+                allDay: false,
+                color: "#50C878",
+                extendedProps: {
+                    type: "practice",
+                    rawTitle: "赤羽小講堂　練習日",
+                    location: "港区立赤羽小学校 講堂"
+                }
+            },
+            {
+                id: "practice_event_9",
+                title: "【練習】赤羽小講堂　練習日",
+                start: "2026-08-15T09:00:00",
+                end: "2026-08-15T12:00:00",
+                allDay: false,
+                color: "#50C878",
+                extendedProps: {
+                    type: "practice",
+                    rawTitle: "赤羽小講堂　練習日",
+                    location: "港区立赤羽小学校 講堂"
+                }
+            },
+            {
+                id: "practice_event_10",
+                title: "【練習】赤羽小講堂　練習日",
+                start: "2026-08-29T09:00:00",
+                end: "2026-08-29T12:00:00",
+                allDay: false,
+                color: "#50C878",
+                extendedProps: {
+                    type: "practice",
+                    rawTitle: "赤羽小講堂　練習日",
+                    location: "港区立赤羽小学校 講堂"
+                }
+            },
             // 出演スケジュール
             {
                 id: "performance_event_1",
-                title: "【出演】天の川蛍祭",
+                title: "【出演（終了）】天の川蛍祭",
                 start: "2026-07-04",
                 allDay: true,
-                color: "#F59E0B",
+                color: "#64748B",
                 extendedProps: {
                     type: "performance",
-                    rawTitle: "天の川蛍祭",
+                    rawTitle: "天の川蛍祭（終了）",
                     location: "白金プラザ"
                 }
             },
             {
                 id: "performance_event_2",
-                title: "【出演】天の川蛍祭",
+                title: "【出演（終了）】天の川蛍祭",
                 start: "2026-07-05",
                 allDay: true,
-                color: "#F59E0B",
+                color: "#64748B",
                 extendedProps: {
                     type: "performance",
-                    rawTitle: "天の川蛍祭",
+                    rawTitle: "天の川蛍祭（終了）",
                     location: "白金プラザ"
                 }
             },
             {
                 id: "performance_event_3",
-                title: "【出演】三田納涼カーニバル",
+                title: "【出演（終了）】三田納涼カーニバル",
                 start: "2026-07-18",
                 allDay: true,
-                color: "#F59E0B",
+                color: "#64748B",
                 extendedProps: {
                     type: "performance",
-                    rawTitle: "三田納涼カーニバル",
+                    rawTitle: "三田納涼カーニバル（終了）",
                     location: "三田商店街"
                 }
             },
