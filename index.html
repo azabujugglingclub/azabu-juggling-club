@@ -687,7 +687,7 @@
                             </div>
                             <h3 class="text-xl font-bold text-slate-900 mb-3 hover:text-[#50C878] transition-colors">みなと区民祭り</h3>
                             <p class="text-sm text-slate-600 mb-6 leading-relaxed">
-                                ステージ時間：<span class="font-bold text-orange-500 bg-orange-50 px-2 py-0.5 rounded">調整中</span><br />
+                                ステージ時間：<span class="font-bold text-orange-500 bg-orange-50 px-2 py-0.5 rounded">15:38～　みんなの広場ステージ</span><br />
                                 港区を代表するお祭りで圧巻のパフォーマンスを披露します。ぜひ会場にお集まりください！
                             </p>
                         </div>
@@ -1096,6 +1096,58 @@
                     location: "港区立赤羽小学校 講堂"
                 }
             },
+            {
+                id: "practice_event_15",
+                title: "【練習】赤羽小講堂　練習日",
+                start: "2026-10-03T09:00:00",
+                end: "2026-10-03T12:00:00",
+                allDay: false,
+                color: "#50C878",
+                extendedProps: {
+                    type: "practice",
+                    rawTitle: "赤羽小講堂　練習日",
+                    location: "港区立赤羽小学校 講堂"
+                }
+            },
+            {
+                id: "practice_event_16",
+                title: "【練習】赤羽小講堂　練習日",
+                start: "2026-10-10T09:00:00",
+                end: "2026-10-10T12:00:00",
+                allDay: false,
+                color: "#50C878",
+                extendedProps: {
+                    type: "practice",
+                    rawTitle: "赤羽小講堂　練習日",
+                    location: "港区立赤羽小学校 講堂"
+                }
+            },
+            {
+                id: "practice_event_17",
+                title: "【練習】赤羽小体育館　練習日",
+                start: "2026-10-17T09:00:00",
+                end: "2026-10-17T12:00:00",
+                allDay: false,
+                color: "#50C878",
+                extendedProps: {
+                    type: "practice",
+                    rawTitle: "赤羽小体育館　練習日",
+                    location: "港区立赤羽小学校 体育館"
+                }
+            },
+            {
+                id: "practice_event_18",
+                title: "【練習】赤羽小講堂　練習日",
+                start: "2026-10-31T09:00:00",
+                end: "2026-10-31T12:00:00",
+                allDay: false,
+                color: "#50C878",
+                extendedProps: {
+                    type: "practice",
+                    rawTitle: "赤羽小講堂　練習日",
+                    location: "港区立赤羽小学校 講堂"
+                }
+            },
             // 出演スケジュール
             {
                 id: "performance_event_1",
@@ -1136,13 +1188,14 @@
             {
                 id: "performance_event_4",
                 title: "【出演】みなと区民まつり",
-                start: "2026-10-10",
-                allDay: true,
+                start: "2026-10-10T15:38:00",
+                allDay: false,
                 color: "#F59E0B",
                 extendedProps: {
                     type: "performance",
                     rawTitle: "みなと区民まつり",
-                    location: "芝公園一帯"
+                    customTime: "15:38～　みんなの広場ステージ",
+                    location: "みんなの広場ステージ（芝公園一帯）"
                 }
             }
         ];
@@ -1162,7 +1215,7 @@
             const calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 locale: 'ja',
-                initialDate: '2026-07-01',
+                initialDate: '2026-09-01',
                 headerToolbar: {
                     left: 'prev,next today',
                     center: 'title',
@@ -1201,7 +1254,9 @@
                         const dayName = daysOfWeek[startObj.getDay()];
                         detailDate.textContent = `${year}年${month}月${day}日 (${dayName})`;
 
-                        if (event.allDay) {
+                        if (event.extendedProps.customTime) {
+                            detailTime.textContent = event.extendedProps.customTime;
+                        } else if (event.allDay) {
                             detailTime.textContent = "終日";
                         } else {
                             const sh = String(startObj.getHours()).padStart(2, '0');
